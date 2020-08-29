@@ -12,13 +12,8 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
 
-// Get data from cities.js
-let cityData = cities;
-// Loop through the cities array and create one marker for each city.
-cityData.forEach(function(city) {
-	console.log(city);
-	L.marker(city.location).addTo(map);
-});
+//  Add a marker to the map for Los Angeles, California.
+let marker = L.marker([34.0522, -118.2437]).addTo(map);
 L.circle([34.0522, -118.2437], {
 	radius:300,
 	color:"black",
